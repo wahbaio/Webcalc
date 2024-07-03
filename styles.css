@@ -1,0 +1,21 @@
+/* Style for the calculator container */
+.calculator {
+    max-width: 800px; /* Maximum width of the calculator */
+}
+
+/* Style for the display */
+.calculator .display {
+    font-size: 1.5em; /* Large rel font size for the display */
+    text-align: right; 
+}
+
+/* General style for the buttons */
+.btn {
+    font-size: 1.5em; /* Large font size for buttons */
+    font-color: white;
+    background-color: green; 
+    border-color: green; 
+    margin: 0.25rem; 
+
+}
+

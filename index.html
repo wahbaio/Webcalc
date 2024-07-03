@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <!-- Bootstrap CDN repo -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main calculator container, mx-auto class for horizontally centering fixed-width block level content -->
+        <div class="calculator mx-auto mt-5">
+            <!-- Input group in this case used to display operation's result -->
+            <div class="input-group mb-3">
+                <!-- Display to show the result, read only mode, no input taken from there -->
+                <input type="text" id="display" class="form-control display" readonly>
+                <!-- Cancel button -->
+                <button class="btn btn-danger btn-lg" onclick="cancel()">C</button>
+            </div>
+            <!-- First row -->
+            <div class="row">
+                <!-- Format the grid system with col-3 to create 4x4 table -->
+                <div class="col-3 p-0">
+                <!-- Style button -->
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('1')">1</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('2')">2</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('3')">3</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('/')">/</button>
+                </div>
+            </div>
+            <!-- Second row -->
+            <div class="row">
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('4')">4</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('5')">5</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('6')">6</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('*')">*</button>
+                </div>
+            </div>
+            <!-- Third row -->
+            <div class="row">
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('7')">7</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('8')">8</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('9')">9</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('-')">-</button>
+                </div>
+            </div>
+            <!-- Fourth row of buttons -->
+            <div class="row">
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('0')">0</button>
+                </div>
+                <div class="col-3 p-0">
+                    <!-- Decimal point button -->
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('.')">.</button>
+                </div>
+                <div class="col-3 p-0">
+                    <!-- Equals button to calculate the result -->
+                    <button class="btn btn-success btn-block rounded" onclick="calculateResult()">=</button>
+                </div>
+                <div class="col-3 p-0">
+                    <button class="btn btn-success btn-block rounded" onclick="appendToDisplay('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Link to custom JavaScript for calculator functionality -->
+    <script src="calculator.js"></script>
+</body>
+</html>
